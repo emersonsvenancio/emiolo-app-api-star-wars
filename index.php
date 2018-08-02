@@ -1,5 +1,7 @@
 <?php  
 	session_start();
+     require_once('model/inc/conexao_pdo.php');
+
 ?>		
 
     <h1>Emiolo - API - Star Wars</h1>		<hr />		
