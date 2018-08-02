@@ -38,7 +38,31 @@
         </head>
 
 <body>	
-  <ul class="quick-actions">
-         <li class="bg_ly"> <a href=""> <i class="glyphicon glyphicon-inbox" style="color:white;font-size:2.6em"></i><span class="label label-success"></span></br></br>APIs </a> </li>
+    <div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Bem vindo <?php echo $_SESSION['usuarioNome']; ?></span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+        <li class="divider"></li>
+        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
       </ul>
+    </li>
+    <li class=""><a title="" href="<?php 
+                        if (file_exists("login/login.php")){ echo $url = "login/login.php"; }  
+                        else { echo $url = "../login/login.php"; } 
+                        ?>"><i class="icon icon-share-alt"></i> <span class="text">Sair</span></a></li>
+  </ul>
+</div>
+<div>
+  <ul class="quick-actions">
+         <li class="bg_ly"> <a href="view/api.php"> <i class="glyphicon glyphicon-inbox" style="color:white;font-size:2.6em"></i><span class="label label-success"></span></br></br>APIs </a> </li>
+         <li class="bg_ly"> <a href="<?php 
+            if (file_exists("controller/login/login.php")){ echo $url = "controller/login/login.php"; }  
+            else { echo $url = "../controller/login/login.php"; } 
+            ?>"> <i class="glyphicon glyphicon-inbox" style="color:white;font-size:2.6em"></i><span class="label label-success"></span></br></br>Sair </a> 
+        </li>
+      </ul>
+      </div>
 </body>	
