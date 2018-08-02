@@ -8,8 +8,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">      
-  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,WebView=1">      -->
-  <meta http-equiv="X-UA-Compatible" content="chrome=1,FF=3">  
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,FF=3">  
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Página para login">
     <meta name="author" content="Emerson">
@@ -19,8 +18,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="../../css/signin.css" rel="stylesheet">
   </head>
 

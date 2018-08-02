@@ -1,6 +1,7 @@
 <?php  
 	session_start();
-     require_once('model/inc/conexao_pdo.php');
+    require_once("controller/login/secure.php");
+    require_once('model/inc/conexao_pdo.php');
 
 ?>		
 
