@@ -20,8 +20,11 @@
  		<input class="form-control" style="margin-bottom: 6px;" type="text" name="cmd" placeholder="Digite um número de 1 a 88 para um Personagem" autofocus>
 
  		<b style="color:white;">Cód_Planeta:</b> 
- 		<input class="form-control" style="margin-bottom: 8px;" type="text" name="cmd1" placeholder="Digite um número de 1 a 61 para um Planeta" autofocus>
+ 		<input class="form-control" style="margin-bottom: 6px;" type="text" name="cmd1" placeholder="Digite um número de 1 a 61 para um Planeta" autofocus>
  		
+ 		<b style="color:white;">Veículo/Nave:</b> 
+ 		<input class="form-control" style="margin-bottom: 8px;" type="text" name="cmd2" placeholder="Digite um número de 1 a 32 para uma Nave" autofocus>
+
  		<button class="btn btn-dark" type="submit">Buscar</button>
 	   
 
@@ -58,6 +61,17 @@
 					$json_data1 = json_decode($json1, true);
 						echo "<pre>";
 						echo "Destino: "."<h2 style='margin-bottom: 0px;'>". $json_data1["name"]. "</h2>". "<i style='font-size: 13px;'><b>Diâmetro</b>: ".$json_data1["diameter"]. " km</i> | " . "<i style='font-size: 13px;'><b>Clima</b>: ".$json_data1["climate"]."</i>";
+						echo "</pre>";
+				}
+				
+				  	//API 3
+				if ($_POST["cmd2"] > '0' && $_POST["cmd2"] < '32') {
+					
+					$cmd2 = $_POST["cmd2"];
+				  	$json2 = file_get_contents("https://swapi.co/api/starships/".$cmd2."/?format=json");
+					$json_data2 = json_decode($json2, true);
+						echo "<pre>";
+						echo "Destino: "."<h2 style='margin-bottom: 0px;'>". $json_data2["name"]. "</h2>". "<i style='font-size: 13px;'><b>Diâmetro</b>: ".$json_data2["model"]. " km</i> ";
 						echo "</pre>";
 				}
 				
