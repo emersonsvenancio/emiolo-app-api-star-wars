@@ -44,8 +44,8 @@
             <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Bem vindo <?php echo $_SESSION['usuarioNome']; ?></span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php 
-                        if (file_exists("controller/login/login.php")){ echo $url = "controller/login/login.php"; }  
-                        else { echo $url = "../controller/login/login.php"; } 
+                        if (file_exists("view/usuarios.php")){ echo $url = "view/usuarios.php"; }  
+                        else { echo $url = "../view/usuarios.php"; } 
                         ?>"><i class="icon-key"></i> Usuários </a>
                     </li>
                 </ul>
