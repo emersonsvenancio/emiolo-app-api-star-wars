@@ -17,10 +17,10 @@
 		<span style="background-color: #080000; color: white; height: 100%; " class = "box-content">Star Wars - API </span>
  		<br>
  		<b style="color:white;">Cód_Personagem:</b> 
- 		<input class="form-control" style="margin-bottom: 6px;" type="text" name="cmd" placeholder="Digite um número de 1 a 88 para um Personagem" required autofocus>
+ 		<input class="form-control" style="margin-bottom: 6px;" type="text" name="cmd" placeholder="Digite um número de 1 a 88 para um Personagem" autofocus>
 
  		<b style="color:white;">Cód_Planeta:</b> 
- 		<input class="form-control" style="margin-bottom: 8px;" type="text" name="cmd1" placeholder="Digite um número de 1 a 61 para um Planeta" required autofocus>
+ 		<input class="form-control" style="margin-bottom: 8px;" type="text" name="cmd1" placeholder="Digite um número de 1 a 61 para um Planeta" autofocus>
  		
  		<button class="btn btn-dark" type="submit">Buscar</button>
 	   
@@ -34,12 +34,12 @@
  		<?php 
 			
 			if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-				if ($_POST["cmd"] > '0' && $_POST["cmd"] < '89' && $_POST["cmd1"] > '0' && $_POST["cmd1"] < '62') {
+				
+				//API 1
+				if ($_POST["cmd"] > '0' && $_POST["cmd"] < '89') {
 					
 					$cmd = $_POST["cmd"];
-					$cmd1 = $_POST["cmd1"];
-				  	
-				  	//API 1
+					
 				  	$json = file_get_contents("https://swapi.co/api/people/".$cmd."/?format=json");
 					$json_data = json_decode($json, true);
 						echo '<span style="background-color: #180000; color: white; height: 100%" class = "box-content">Personagem(características) e Destino(características) </span>';
@@ -48,12 +48,16 @@
 						echo "<pre>";
 					  	echo "Nome: ". "<h2 style='margin-bottom: 0px;'>".$json_data["name"]."</h2>". "<i style='font-size: 13px;'><b>Altura</b>: ".$json_data["height"]. " cm</i> | " . "<i style='font-size: 13px;'><b>Peso</b>: ".$json_data["mass"]." km</i>";
 						echo "</pre>";
-
+				}
+				
 				  	//API 2
+				if ($_POST["cmd1"] > '0' && $_POST["cmd1"] < '62') {
+					
+					$cmd1 = $_POST["cmd1"];
 				  	$json1 = file_get_contents("https://swapi.co/api/planets/".$cmd1."/?format=json");
 					$json_data1 = json_decode($json1, true);
 						echo "<pre>";
-						echo "Destino: "."<h3 style='margin-bottom: 0px;'>". $json_data1["name"]. "</h3>". "<i style='font-size: 13px;'><b>Diâmetro</b>: ".$json_data1["diameter"]. " km</i> | " . "<i style='font-size: 13px;'><b>Clima</b>: ".$json_data1["climate"]."</i>";
+						echo "Destino: "."<h2 style='margin-bottom: 0px;'>". $json_data1["name"]. "</h2>". "<i style='font-size: 13px;'><b>Diâmetro</b>: ".$json_data1["diameter"]. " km</i> | " . "<i style='font-size: 13px;'><b>Clima</b>: ".$json_data1["climate"]."</i>";
 						echo "</pre>";
 				}
 				
