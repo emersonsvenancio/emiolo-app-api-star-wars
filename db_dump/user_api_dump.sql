@@ -18,31 +18,6 @@ USE `user_api_db`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `nivel_acessos`
---
-
-DROP TABLE IF EXISTS `nivel_acessos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `nivel_acessos` (
-  `id` int(11) NOT NULL,
-  `nome_nivel` varchar(220) NOT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `nivel_acessos`
---
-
-LOCK TABLES `nivel_acessos` WRITE;
-/*!40000 ALTER TABLE `nivel_acessos` DISABLE KEYS */;
-INSERT INTO `nivel_acessos` VALUES (3,'Administrador','2018-03-16 00:00:00','2018-03-16 00:00:00'),(4,'Comum','2018-03-16 00:00:00','2018-03-16 00:00:00');
-/*!40000 ALTER TABLE `nivel_acessos` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tb_login`
 --
 
@@ -50,14 +25,15 @@ DROP TABLE IF EXISTS `tb_login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_login` (
-  `Cod_Usuario` int(11) NOT NULL,
+  `Cod_Usuario` int(11) NOT NULL AUTO_INCREMENT,
   `Usuario` varchar(50) DEFAULT NULL,
   `Senha` varchar(15) DEFAULT NULL,
   `email` varchar(220) NOT NULL,
   `nivelacesso_id` int(11) NOT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`Cod_Usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +42,7 @@ CREATE TABLE `tb_login` (
 
 LOCK TABLES `tb_login` WRITE;
 /*!40000 ALTER TABLE `tb_login` DISABLE KEYS */;
-INSERT INTO `tb_login` VALUES (3,'emersan@msn.com','123456','emersan@msn.com',1,'2018-03-16 00:00:00','2018-03-16 00:00:00'),(4,'pamelacsv@hotmail.com','1','pamelacsv@hotmail.com',2,'2018-03-16 00:00:00','2018-03-16 00:00:00'),(5,'teste@teste.com.br','!$@%#&','',1,'2018-04-10 00:00:00',NULL);
+INSERT INTO `tb_login` VALUES (1,'Emerson','123456','emersan@msn.com        ',1,NULL,NULL);
 /*!40000 ALTER TABLE `tb_login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-02 22:46:54
+-- Dump completed on 2018-08-03 13:22:20

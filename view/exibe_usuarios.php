@@ -1,8 +1,8 @@
     <div class="col-md-8" align="center">
     <form id="botoes">
-          <a class="btn btn-dark" href="customers/addTarefasResponsaveis.php">
+          <a class="btn btn-dark" href="usuarios.php">
             <i class="fa fa-plus"></i> Atualizar</a>           
-          <a class="btn btn-dark" href="customers/controledetarefas_gantt.php">
+          <a class="btn btn-dark" href="../model/database_add_usuarios.php">
             <i class="fa fa-refresh"></i> Novo</a>
     </form>
     </div> 
@@ -15,6 +15,7 @@
           <tr>  
             <th width="5%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Cod_Usuario</th>
             <th width="10%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Usuario</th>   
+            <th width="10%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Email</th>   
             <th width="8%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Senha</th>    
             <th width="5%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">nivelacesso_id</th> 
             <th width="3%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Botões</th> 
@@ -27,6 +28,8 @@
 
         <td class="table-text-right tooltip-enable-mandatory" data-toggle="tooltip" data-container="#lista_lancamentos" contenteditable="true" onBlur="saveToDatabase(this,'Cod_Usuario','<?php echo $row12['Cod_Usuario']; ?>')" onClick="showEdit(this);" style="vertical-align:middle; text-align:center; color:white; background-color:#080000; font-size: 12px" ><?php echo $row12['Cod_Usuario']; ?></td>
         <td class="table-text-right tooltip-enable-mandatory" data-toggle="tooltip" data-container="#lista_lancamentos" contenteditable="true" onBlur="saveToDatabase(this,'Usuario','<?php echo $row12['Cod_Usuario']; ?>')" onClick="showEdit(this);" data-placement="bottom" data-html="true" onmouseenter="tooltipEnterEvent($(this))" onmouseleave="tooltipLeaveEvent($(this))" style="vertical-align:middle; text-align:center; font-size: 12px"><?php echo $row12['Usuario']; ?>
+        </td>  
+        <td class="table-text-right tooltip-enable-mandatory" data-toggle="tooltip" data-container="#lista_lancamentos" contenteditable="true" onBlur="saveToDatabase(this,'email','<?php echo $row12['Cod_Usuario']; ?>')" onClick="showEdit(this);" data-placement="bottom" data-html="true" onmouseenter="tooltipEnterEvent($(this))" onmouseleave="tooltipLeaveEvent($(this))" style="vertical-align:middle; text-align:center; font-size: 12px"><?php echo $row12['email']; ?>
         </td>  
         <td class="normal" data-toggle="tooltip" data-container="#lista_lancamentos" contenteditable="true" onBlur="saveToDatabase(this,'Senha','<?php echo $row12['Cod_Usuario']; ?>');window.id = this.id; update();" onClick="showEdit(this);" placement="bottom" data-html="true" onmouseenter="tooltipEnterEvent($(this))" onmouseleave="tooltipLeaveEvent($(this))" style="vertical-align:middle; text-align:center; font-size: 12px"><?php echo $row12['Senha']; ?>
         </td>       
