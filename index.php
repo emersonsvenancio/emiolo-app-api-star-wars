@@ -37,7 +37,7 @@
 <br>    
 <br>   
 
-<body style="background-color: #cccccc; vertical-align: center; ">
+<body style="background-image: url('controller/login/img/imagem1.webp'); background-position: center; background-repeat: no-repeat; background-size: 90% 90%" class="text-center">
     <div>
     </div>
 </body>   

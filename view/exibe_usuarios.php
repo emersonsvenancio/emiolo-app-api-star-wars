@@ -17,7 +17,7 @@
             <th width="10%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Usuario</th>   
             <th width="10%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Email</th>   
             <th width="8%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Senha</th>    
-            <th width="5%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">nivelacesso_id</th> 
+            <th width="5%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px">Nível_Acesso</th> 
             <th width="3%" style="vertical-align:middle; text-align:center; color:white; background-color:#300000; font-size: 12px"></th> 
           </tr>  
       </thead>  
@@ -35,7 +35,7 @@
         </td>       
         <td class="table-text-right tooltip-enable-mandatory" data-toggle="tooltip" data-container="#lista_lancamentos" contenteditable="true" onBlur="saveToDatabase(this,'nivelacesso_id','<?php echo $row12['Cod_Usuario']; ?>');window.id = this.id;update();" onClick="showEdit(this);" data-placement="bottom" data-html="true" onmouseenter="tooltipEnterEvent($(this))" onmouseleave="tooltipLeaveEvent($(this))" style="vertical-align:middle; text-align:center; font-size: 12px"><?php echo $row12['nivelacesso_id']; ?></td>       
         
-        <td class="actions text-right" style="text-align:middle; vertical-align:middle">  
+        <td class="actions text-right" style="text-align: center;">  
       
       <form id="menu" action="../model/database_delete_usuarios.php?id=<?php echo $row12['Cod_Usuario']; ?>" method="POST">
         
@@ -45,7 +45,6 @@
       </td>
     </tr>
  </div>
-
                 
     <?php endforeach; ?>
     <?php else : ?>     
@@ -56,6 +55,7 @@
  </table>
 
 <script>
+
     function showEdit(editableObj) {
       //$(editableObj).css("background","#FFF");
     } 
