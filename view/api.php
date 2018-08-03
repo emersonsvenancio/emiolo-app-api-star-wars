@@ -45,7 +45,7 @@
 					
 				  	$json = file_get_contents("https://swapi.co/api/people/".$cmd."/?format=json");
 					$json_data = json_decode($json, true);
-						echo '<span style="background-color: #180000; color: white; height: 100%" class = "box-content">Personagem(características) e Destino(características) </span>';
+						echo '<span style="background-color: #180000; color: white; height: 100%" class = "box-content">Personagem(características) - Destino(características) - Veículo(características) </span>';
 					
 						echo "<br>";
 						echo "<pre>";
@@ -71,7 +71,7 @@
 				  	$json2 = file_get_contents("https://swapi.co/api/starships/".$cmd2."/?format=json");
 					$json_data2 = json_decode($json2, true);
 						echo "<pre>";
-						echo "Destino: "."<h2 style='margin-bottom: 0px;'>". $json_data2["name"]. "</h2>". "<i style='font-size: 13px;'><b>Diâmetro</b>: ".$json_data2["model"]. " km</i> ";
+						echo "Veículo/Nave: "."<h2 style='margin-bottom: 0px;'>". $json_data2["name"]. "</h2>". "<i style='font-size: 13px;'><b>Modelo</b>: ".$json_data2["model"]. "</i> ";
 						echo "</pre>";
 				}
 				
