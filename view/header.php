@@ -55,6 +55,11 @@
                 ?>"><i class="icon icon-star"></i> <span class="text">APIs</span></a>
             </li>
             <li class=""><a title="" href="<?php 
+                if (file_exists("view/usuarios.php")){ echo $url = "view/usuarios.php"; }  
+                else { echo $url = "../view/usuarios.php"; } 
+                ?>"><i class="icon icon-star"></i> <span class="text">Usuários</span></a>
+            </li>
+            <li class=""><a title="" href="<?php 
                 if (file_exists("controller/login/login.php")){ echo $url = "controller/login/login.php"; }  
                 else { echo $url = "../controller/login/login.php"; } 
                 ?>"><i class="icon icon-share-alt"></i> <span class="text">Sair</span></a>

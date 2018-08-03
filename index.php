@@ -1,4 +1,4 @@
-    <?php include_once 'view/header.php'; ?>
+<?php include_once 'view/header.php'; ?>
 <?php  
     error_reporting(0);
     require_once("controller/login/secure.php");

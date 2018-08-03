@@ -3,8 +3,8 @@
   require_once('../../model/inc/conexao_pdo.php');
   require_once('../../model/database.php');
 
-  $stmt13->execute();
-  $result = $stmt13->fetchAll(PDO::FETCH_ASSOC);
+  $stmt1->execute();
+  $result = $stmt1->fetchAll(PDO::FETCH_ASSOC);
  
  if (empty($result)) { //se os dados estão incorretos
   $_SESSION['loginErro'] = "Usuário ou senha inválido";
