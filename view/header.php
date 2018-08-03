@@ -3,33 +3,39 @@
 ?>
 
 <head>
+
     <script src="<?php if (file_exists("js/jquery.min.js")){ echo $url = "js/jquery.min.js"; }  
-        else { echo $url = "../js/jquery.min.js"; } ?>">
-    </script>
+                        else { echo $url = "../js/jquery.min.js"; } ?>"></script>
 
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
     <script src="<?php if (file_exists("js/bootstrap.min.js")){ echo $url = "js/bootstrap.min.js"; }  
-        else { echo $url = "../js/bootstrap.min.js"; } ?>">
-    </script>       
+                        else { echo $url = "../js/bootstrap.min.js"; } ?>"></script>        
+    <link rel="stylesheet" href="<?php 
+                        if (file_exists("css/bootstrap-responsive.min.css")){ echo $url = "css/bootstrap-responsive.min.css"; }  
+                        else { echo $url = "../css/bootstrap-responsive.min.css"; } 
+                        ?>" />
 
     <link rel="stylesheet" href="<?php 
-        if (file_exists("css/bootstrap.min.css")){ echo $url = "css/bootstrap.min.css"; }  
-        else { echo $url = "../css/bootstrap.min.css"; } 
-    ?>" />
+                        if (file_exists("css/matrix-style.css")){ echo $url = "css/matrix-style.css"; }  
+                        else { echo $url = "../css/matrix-style.css"; } 
+                        ?>" />
 
     <link rel="stylesheet" href="<?php 
-        if (file_exists("css/bootstrap-responsive.min.css")){ echo $url = "css/bootstrap-responsive.min.css"; }  
-        else { echo $url = "../css/bootstrap-responsive.min.css"; } 
-    ?>" />
-
-    <link rel="stylesheet" href="<?php 
-        if (file_exists("css/matrix-style.css")){ echo $url = "css/matrix-style.css"; }  
-        else { echo $url = "../css/matrix-style.css"; } 
-    ?>" />
-
+                        if (file_exists("css/matrix-media.css")){ echo $url = "css/matrix-media.css"; }  
+                        else { echo $url = "../css/matrix-media.css"; } 
+                        ?>" />
     <link href="<?php 
-        if (file_exists("css/font-awesome.css")){ echo $url = "css/font-awesome.css"; }  
-        else { echo $url = "../css/font-awesome.css"; } 
-    ?>" rel="stylesheet" />
+                        if (file_exists("css/font-awesome.css")){ echo $url = "css/font-awesome.css"; }  
+                        else { echo $url = "../css/font-awesome.css"; } 
+                        ?>" rel="stylesheet" />
+<link href="<?php 
+                        if (file_exists("css/bootstrap_table.css")){ echo $url = "css/bootstrap_table.css"; }  
+                        else { echo $url = "../css/bootstrap_table.css"; } 
+                        ?>" rel="stylesheet" />                        
+
+       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />  
+
 </head>
 
     <div id="user-nav" class="navbar navbar-inverse">

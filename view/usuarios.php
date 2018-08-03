@@ -6,7 +6,7 @@
       if (file_exists("css/matrix-style.css")){ echo $url = "css/matrix-style.css"; }  
       else { echo $url = "../css/matrix-style.css"; }   
       ?>" 
-/>
+      />
 
 <?php 
   error_reporting(0);
@@ -26,7 +26,10 @@
 
   <body>
     <div class="col-md-12">
-        <div id="example" style="height: 180px; width: 100%;"></div>
+        <br>
+        <br>
+        <br>
+        <br>
         <?php include_once 'exibe_usuarios.php'; ?>
     </div>
   </body>
