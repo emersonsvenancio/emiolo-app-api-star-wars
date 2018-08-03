@@ -10,16 +10,17 @@
  <br>	
  <br>	
 
-
- <form class="px-4 py-3" method="post">
+<body style="background-color: #cccccc; vertical-align: center; ">
+   
+   <form class="px-4 py-3" method="post">
  	<div class="col-md-8"  style="background-color: #300000">
 		<span style="background-color: #080000; color: white; height: 100%; " class = "box-content">Star Wars - API </span>
  		<br>
  		<b style="color:white;">Cód_Personagem:</b> 
- 		<input class="form-control" style="margin-bottom: 6px" type="text" name="cmd" placeholder="Digite um número de 1 a 88" required autofocus>
+ 		<input class="form-control" style="margin-bottom: 6px;" type="text" name="cmd" placeholder="Digite um número de 1 a 88 para um Personagem" required autofocus>
 
  		<b style="color:white;">Cód_Planeta:</b> 
- 		<input class="form-control" style="margin-bottom: 8px" type="text" name="cmd1" placeholder="Digite um número de 1 a 61" required autofocus>
+ 		<input class="form-control" style="margin-bottom: 8px;" type="text" name="cmd1" placeholder="Digite um número de 1 a 61 para um Planeta" required autofocus>
  		
  		<button class="btn btn-dark" type="submit">Buscar</button>
 	   
@@ -61,5 +62,7 @@
 		?>
  		<hr style="margin-bottom: 0px" />
  	
+ 	</form>
 
- </form>
+</body>
+ 

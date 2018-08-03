@@ -40,19 +40,19 @@
                     <li><a href="<?php 
                         if (file_exists("controller/login/login.php")){ echo $url = "controller/login/login.php"; }  
                         else { echo $url = "../controller/login/login.php"; } 
-                        ?>"><i class="icon-key"></i> Sair</a>
+                        ?>"><i class="icon-key"></i> Usuários </a>
                     </li>
                 </ul>
             </li>
             <li class=""><a title="" href="<?php 
                 if (file_exists("index.php")){ echo $url = "index.php"; }  
                 else { echo $url = "../index.php"; } 
-                ?>"><i class="icon icon-share-alt"></i> <span class="text">Home</span></a>
+                ?>"><i class="icon icon-home"></i> <span class="text">Home</span></a>
             </li>
             <li class=""><a title="" href="<?php 
                 if (file_exists("view/api.php")){ echo $url = "view/api.php"; }  
                 else { echo $url = "../view/api.php"; } 
-                ?>"><i class="icon icon-share-alt"></i> <span class="text">APIs</span></a>
+                ?>"><i class="icon icon-star"></i> <span class="text">APIs</span></a>
             </li>
             <li class=""><a title="" href="<?php 
                 if (file_exists("controller/login/login.php")){ echo $url = "controller/login/login.php"; }  

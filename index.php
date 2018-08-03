@@ -1,5 +1,5 @@
+    <?php include_once 'view/header.php'; ?>
 <?php  
-	session_start();
     error_reporting(0);
     require_once("controller/login/secure.php");
     require_once('model/inc/conexao_pdo.php');
@@ -34,6 +34,10 @@
         else { echo $url = "../css/font-awesome.css"; } 
     ?>" rel="stylesheet" />
 </head>
+<br>    
+<br>   
 
-<body>
+<body style="background-color: #cccccc; vertical-align: center; ">
+    <div>
+    </div>
 </body>   
